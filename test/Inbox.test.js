@@ -34,13 +34,13 @@ describe('Inbox', ()=>{
   // Getter method
   it('has a default message', async ()=>{
     const message = await inbox.methods.message().call();
-    //methods contains methods of contract. Call() can convey the sender and gas amount
+    //methods contains methods of contract. Call() is used for read-only functions
     assert.equal(message, 'Hi there!')
   });
 
   // Setter method
   it('Can change the message', async ()=>{
-    await inbox.methods.setMsg('Bye').send({ from:accounts[0] });
+    await inbox.methods.setMsg('Bye').send({ from:accounts[0] }); //Send() is used to show we want to make change inside the contract
     const message = await inbox.methods.message().call();
     assert.equal(message, 'Bye');
   });

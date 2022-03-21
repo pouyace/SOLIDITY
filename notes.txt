@@ -1,0 +1,7 @@
+web3:             portal to Ethereum world
+ganache:          hosts a local test network, generates accounts and is fast
+interface:        ABI. the transition layer that communicates data from over JS world
+bytecode:         compiled contract
+mocha:            testing module
+HDWalletProvider: Used to connect to a network and unlock an account to use the network.
+                    We unlock the account using 12 word pneumonic  
